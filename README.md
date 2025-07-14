@@ -2,11 +2,6 @@
 
 **헬스케어 식단 기록 및 운동 관리 서비스**
 
-<img src="https://img.shields.io/badge/Back-End-Spring%20Boot-green" />
-<img src="https://img.shields.io/badge/Front-End-React%20%2B%20Vite-blue" />
-<img src="https://img.shields.io/badge/Database-MySQL-orange" />
-<img src="https://img.shields.io/badge/Security-JWT-red" />
-
 ---
 
 ## 📌 프로젝트 소개
@@ -20,8 +15,31 @@
 
 Meal-Mate_project/
 ├── meal-mate-BackEnd/ # Spring Boot 백엔드
+│ ├── src/
+│ │ ├── main/
+│ │ │ ├── java/com/example/meal_mate/
+│ │ │ │ ├── controller/
+│ │ │ │ ├── service/
+│ │ │ │ ├── repository/
+│ │ │ │ ├── dto/
+│ │ │ │ ├── entity/
+│ │ │ │ └── MealMateApplication.java
+│ │ │ └── resources/
+│ │ │ ├── application.yml
+│ │ │ └── static/
+│ └── build.gradle
+│
 ├── meal-mate-FrontEnd/ # React + Vite 프론트엔드
-└── README.md
+│ ├── public/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ ├── index.html
+│ └── vite.config.js
+│
+└── README.md # 프로젝트 설명 파일
 
 
 ---
@@ -55,6 +73,4 @@ Meal-Mate_project/
 | **Front-End**| Vite, React, Axios, React Router               |
 | **Database** | MySQL                                          |
 | **Dev Tools**| IntelliJ, VS Code, Git, GitHub, Postman        |
-
----
 
