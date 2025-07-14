@@ -13,36 +13,35 @@
 
 ## 📂 프로젝트 구조
 
+```
 Meal-Mate_project/
-├── meal-mate-BackEnd/ # Spring Boot 백엔드
-│ ├── src/
-│ │ ├── main/
-│ │ │ ├── java/com/example/meal_mate/
-│ │ │ │ ├── controller/
-│ │ │ │ ├── service/
-│ │ │ │ ├── repository/
-│ │ │ │ ├── dto/
-│ │ │ │ ├── entity/
-│ │ │ │ └── MealMateApplication.java
-│ │ │ └── resources/
-│ │ │ ├── application.yml
-│ │ │ └── static/
-│ └── build.gradle
+├── meal-mate-BackEnd/           # Spring Boot 백엔드
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/meal_mate/
+│   │   │   │   ├── controller/
+│   │   │   │   ├── service/
+│   │   │   │   ├── repository/
+│   │   │   │   ├── dto/
+│   │   │   │   ├── entity/
+│   │   │   │   └── MealMateApplication.java
+│   │   │   └── resources/
+│   │   │       ├── application.yml
+│   │   │       └── static/
+│   └── build.gradle
 │
-├── meal-mate-FrontEnd/ # React + Vite 프론트엔드
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ ├── index.html
-│ └── vite.config.js
+├── meal-mate-FrontEnd/          # React + Vite 프론트엔드
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── index.html
+│   └── vite.config.js
 │
-└── README.md # 프로젝트 설명 파일
-
-
----
+└── README.md                    # 프로젝트 설명 파일
+```
 
 ## 🛠 주요 기능
 
