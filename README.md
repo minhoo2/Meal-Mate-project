@@ -3,8 +3,11 @@
 **헬스케어 식단 및 운동 기록 웹 애플리케이션**
 
 <img src="https://img.shields.io/badge/Back-End-Spring%20Boot-green" />
+<br>
 <img src="https://img.shields.io/badge/Front-End-React%20%2B%20Vite-blue" />
+<br>
 <img src="https://img.shields.io/badge/Database-MySQL-orange" />
+<br>
 <img src="https://img.shields.io/badge/Security-JWT-red" />
 
 ---
