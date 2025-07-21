@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import Profile from './pages/Profile';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const isLoggedIn = !!localStorage.getItem('accessToken');
@@ -24,7 +24,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route
           path="/profile"
-          element={isLoggedIn ? <Profile /> : <Navigate to="/login" replace />}
+          element={isLoggedIn ? <ProfilePage /> : <Navigate to="/login" replace />}
         />
       </Routes>
     </Router>

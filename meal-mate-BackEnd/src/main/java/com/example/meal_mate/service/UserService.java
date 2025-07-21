@@ -59,9 +59,10 @@ public class UserService {
     }
 
     public UserResponseDto loginUser(UserLoginDto loginDto) {
-        log.info("User login attempt with email: {}", loginDto.getUsernameOrEmail());
+        log.info("User login attempt with usernameOrEmail: {}", loginDto.getUsernameOrEmail());
 
-        User user = userRepository.findByEmail(loginDto.getUsernameOrEmail())
+        // 이메일 또는 사용자명으로 사용자 찾기
+        User user = userRepository.findByUsernameOrEmail(loginDto.getUsernameOrEmail())
                 .orElseThrow(() -> new ResourceNotFoundException("사용자를 찾을 수 없습니다: " + loginDto.getUsernameOrEmail()));
 
         if (!passwordEncoder.matches(loginDto.getPassword(), user.getPassword())) {

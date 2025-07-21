@@ -18,7 +18,7 @@ public class UserRegistrationDto {
     private String email;
     
     @NotBlank(message = "비밀번호는 필수입니다.")
-    @Size(min = 8, max = 100, message = "비밀번호는 8자 이상 100자 이하여야 합니다.")
+    @Size(min = 6, max = 100, message = "비밀번호는 6자 이상 100자 이하여야 합니다.")
     private String password;
     
     @NotBlank(message = "비밀번호 확인은 필수입니다.")
@@ -40,4 +40,9 @@ public class UserRegistrationDto {
     private String activityLevel;
     
     private Integer dailyCalorieGoal;
+    
+    // 비밀번호 확인 검증 메서드
+    public boolean isPasswordMatching() {
+        return password != null && password.equals(passwordConfirm);
+    }
 }

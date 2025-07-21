@@ -1,6 +1,7 @@
 package com.example.meal_mate.config;
 
 import io.jsonwebtoken.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -8,8 +9,11 @@ import java.util.Date;
 @Service
 public class JwtTokenProvider {
 
-    private final String secretKey = "yourSecretKey"; // 보안 위해 환경변수로 관리 권장
-    private final long validityInMilliseconds = 3600000; // 1시간
+    @Value("${jwt.secret}")
+    private String secretKey;
+    
+    @Value("${jwt.expiration}")
+    private long validityInMilliseconds;
 
     // JWT 토큰 생성 메서드
     public String createToken(String userEmail) {

@@ -51,16 +51,16 @@ export default function LoginPage() {
         <div className="login-header">
           <div className="logo-container">
             <div className="logo">🍽️</div>
-            <h1>Meal Mate</h1>
+            <h1>핏로그</h1>
           </div>
-          <p className="subtitle">맛있는 식사 여행을 시작하세요</p>
+          <p className="subtitle">운동과 식단을 체계적으로 관리하세요</p>
         </div>
         
         <form onSubmit={handleSubmit} className="login-form">
           <div className="input-group">
             <div className="input-wrapper">
               <input
-                type="email"
+                type="text"
                 placeholder="이메일 또는 사용자명"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

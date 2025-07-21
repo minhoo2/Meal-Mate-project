@@ -173,6 +173,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   background: #fafafa;
+  color: #1a1a1a;
   transition: all 0.3s ease;
   outline: none;
 }
@@ -180,6 +181,7 @@ body {
 .form-input:focus {
   border-color: #667eea;
   background: #fff;
+  color: #1a1a1a;
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
