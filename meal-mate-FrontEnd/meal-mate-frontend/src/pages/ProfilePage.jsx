@@ -268,10 +268,38 @@ const ProfilePage = () => {
     <div className="profile-container">
       <div className="profile-card">
         <div className="profile-header">
-          <h2>프로필</h2>
-          <button onClick={handleLogout} className="logout-btn">
-            로그아웃
-          </button>
+          <div className="profile-nav">
+            <button 
+              className="nav-btn"
+              onClick={() => navigate('/dashboard')}
+            >
+              🏠 대시보드
+            </button>
+            <button 
+              className="nav-btn active"
+              onClick={() => navigate('/profile')}
+            >
+              👤 프로필
+            </button>
+            <button 
+              className="nav-btn"
+              onClick={() => navigate('/meals')}
+            >
+              🍽️ 식사관리
+            </button>
+            <button 
+              className="nav-btn"
+              onClick={() => navigate('/workouts')}
+            >
+              💪 운동관리
+            </button>
+          </div>
+          <div className="profile-title-section">
+            <h2>프로필</h2>
+            <button onClick={handleLogout} className="logout-btn">
+              로그아웃
+            </button>
+          </div>
         </div>
         
         {error && (

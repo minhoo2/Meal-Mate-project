@@ -83,15 +83,35 @@ export default function RegisterPage() {
     try {
       const { confirmPassword, ...submitData } = form;
       
+      // 숫자 필드들을 정수로 변환하고 서버 필드명에 맞춰 변환
+      const processedData = {
+        ...submitData,
+        username: submitData.nickname, // 서버에서 username 필드를 요구함
+        passwordConfirm: confirmPassword, // 서버에서 passwordConfirm 필드를 요구함
+        age: parseInt(submitData.age),
+        height: parseInt(submitData.height),
+        weight: parseInt(submitData.weight)
+      };
+      
+      console.log('전송될 데이터:', processedData); // 디버깅용
+      
       const res = await fetch('http://localhost:8080/api/users/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(submitData),
+        body: JSON.stringify(processedData),
       });
 
       if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || '회원가입 실패');
+        const errorText = await res.text();
+        console.log('서버 응답:', errorText); // 디버깅용
+        let errorMessage = '회원가입 실패';
+        try {
+          const errorData = JSON.parse(errorText);
+          errorMessage = errorData.message || errorMessage;
+        } catch {
+          errorMessage = errorText || errorMessage;
+        }
+        throw new Error(errorMessage);
       }
 
       // 회원가입 성공 후 로그인 페이지로 이동
